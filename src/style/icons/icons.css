@@ -1,0 +1,45 @@
+[class^="_icon-"]:before,
+[class*=" _icon-"]:before {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="_icon-"]:before,
+[class*=" _icon-"]:before {
+  display: block;
+}
+
+._icon-arrow-icon:before {
+  content: "\1f59b";
+}
+
+._icon-cart-icon:before {
+  content: "\1f31a";
+}
+
+._icon-search-icon:before {
+  content: "\1f308";
+}
+
+._icon-favorite-icon:before {
+  content: "\e902";
+}
+
+._icon-profile-icon:before {
+  content: "\1f596";
+}
+
+._icon-done-icon:before {
+  content: "\1f30c";
+}
+
+._icon-plus-icon:before {
+  content: "\1f595";
+}
+/*# sourceMappingURL=icons.css.map */

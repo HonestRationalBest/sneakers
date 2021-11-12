@@ -1,0 +1,131 @@
+.header {
+  margin-top: 85px;
+  height: 130px;
+  background: #fff;
+  padding: 45px 0px;
+  border-radius: 20px 20px 0px 0px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.header__logo img {
+  height: 40px;
+  width: 40px;
+}
+
+@media (max-width: 479px) {
+  .header__logo {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+}
+
+.header__main {
+  margin-left: 16px;
+}
+
+.header__navbar {
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 88.88889%;
+  margin: 0 auto;
+}
+
+.header-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.header-icon:hover {
+  color: #686868;
+  -webkit-transition: 0.3s ease all 0s;
+  transition: 0.3s ease all 0s;
+}
+
+.main-header {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+.main-header__title {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.main-header__text {
+  color: #9d9d9d;
+  font-size: 14px;
+}
+
+@media (max-width: 479px) {
+  .main-header {
+    display: none;
+  }
+}
+
+.actions-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.actions-header :not(:last-child):not(:first-child) {
+  margin-right: 30px;
+}
+
+.actions-header__basket {
+  color: #9b9b9b;
+}
+
+.actions-header__favorite {
+  color: #9b9b9b;
+}
+
+.actions-header__saved {
+  color: #9b9b9b;
+}
+
+.cart-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 20px;
+  margin-right: 30px;
+}
+
+.cart-header__icon {
+  margin: 0px 8px 0px 0px;
+  color: #9b9b9b;
+}
+
+.cart-header__text {
+  font-size: 14px;
+  color: #5c5c5c;
+  margin-bottom: 1px;
+}
+/*# sourceMappingURL=Header.css.map */
