@@ -42,4 +42,8 @@
 ._icon-plus-icon:before {
   content: "\1f595";
 }
+
+._icon-arrow-left:before {
+  content: "\ea40";
+}
 /*# sourceMappingURL=icons.css.map */

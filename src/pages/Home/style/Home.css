@@ -1,0 +1,62 @@
+.home {
+  background: #fff;
+}
+
+.home__container {
+  max-width: 88.88889%;
+  margin: 0 auto;
+}
+
+.home__slider {
+  padding: 45px 0px;
+}
+
+.grid-home__grid {
+  margin-top: 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.form-search {
+  border-radius: 10px;
+  border: 1px solid #f3f3f3;
+  padding: 13px 0px 13px 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #c4c4c4;
+}
+
+.form-search__btn {
+  font-size: 18px;
+}
+
+.form-search__input {
+  font-size: 14px;
+  padding-left: 12px;
+  margin-top: 1px;
+}
+
+.navbar-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar-grid__title {
+  font-size: 32px;
+  font-weight: 700;
+}
+/*# sourceMappingURL=Home.css.map */

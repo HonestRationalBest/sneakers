@@ -37,8 +37,7 @@
 }
 
 .header-icon {
-  width: 20px;
-  height: 20px;
+  font-size: 18px;
 }
 
 .header-icon:hover {
@@ -126,6 +125,5 @@
 .cart-header__text {
   font-size: 14px;
   color: #5c5c5c;
-  margin-bottom: 1px;
 }
 /*# sourceMappingURL=Header.css.map */

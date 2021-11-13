@@ -6,6 +6,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Orders from "./pages/Orders";
 import { Header } from "./components/Header/Header";
+import Favorites from "./pages/favorites";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <>
         <Route path="/" element={<Home />} />
         <Route path="/orders" element={<Orders />} />
+        <Route path="/favorites" element={<Favorites />} />
       </>
     </Routes>
     </div>
