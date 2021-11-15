@@ -3,7 +3,7 @@ import "./style/Slider.scss"
 import slider_logo from "../../images/slider_logo.png"
 import slider_img_01 from "../../images/slider_img_01.png"
 
-export const Slider = () => {
+export const Slider:React.FC = () => {
   return (
     <div className="slider">
       <div className="slider__logo">

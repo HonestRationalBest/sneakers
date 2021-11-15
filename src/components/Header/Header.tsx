@@ -3,7 +3,7 @@ import "./style/Header.scss";
 import logo from "../../images/logo.png";
 import { NavLink } from "react-router-dom";
 
-export const Header = () => {
+export const Header:React.FC = () => {
   return (
     <div className="header">
       <div className="header__navbar">

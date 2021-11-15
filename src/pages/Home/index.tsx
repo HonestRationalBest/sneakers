@@ -1,9 +1,23 @@
-import React from "react";
+import { useEffect } from "react";
 import "./style/Home.scss";
 import { Slider } from "../../components/Slider/Slider";
-import { GridItem as Item } from "../../components/GridItem/GridItem";
+import { GridItem } from "../../components/GridItem/GridItem";
 
-const Home = () => {
+import { fetchItems } from "../../store/ducks/actionCreaters";
+import { useDispatch, useSelector } from "react-redux";
+import { selectIsItemsLoading, selectItems } from "../../store/ducks/selectors";
+import { EmptyGridItem } from "../../components/EmptyGridItem/EmptyGridItem";
+
+const Home: React.FC = () => {
+  const dispatch = useDispatch();
+  const items = useSelector(selectItems);
+
+  const isLoading = useSelector(selectIsItemsLoading);
+
+  useEffect(() => {
+    dispatch(fetchItems());
+  }, [dispatch]);
+
   return (
     <div className="home">
       <div className="home__container">
@@ -28,22 +42,26 @@ const Home = () => {
             </form>
           </div>
           <div className="grid-home__grid">
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
+            {isLoading ? (
+              <>
+                <EmptyGridItem />
+                <EmptyGridItem />
+                <EmptyGridItem />
+                <EmptyGridItem />
+                <EmptyGridItem />
+                <EmptyGridItem />
+                <EmptyGridItem />
+                <EmptyGridItem />
+                <EmptyGridItem />
+                <EmptyGridItem />
+                <EmptyGridItem />
+                <EmptyGridItem />
+              </>
+            ) : (
+              items.map((item) => {
+                return <GridItem {...item} />;
+              })
+            )}
           </div>
         </div>
       </div>

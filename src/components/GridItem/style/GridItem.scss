@@ -2,11 +2,13 @@
   border: 1px solid #f3f3f3;
   border-radius: 40px;
   padding: 20px 30px;
-
+  display: flex;
+  flex-direction: column;
   &__main {
     font-size: 14px;
     line-height: 17 / 14 * 100%;
     margin: 18px 0px;
+    flex: 1 1 auto;
   }
 }
 .header {
@@ -62,5 +64,52 @@
     color: #e7e7e7;
     padding: 10px;
     border-radius: 7px;
+  }
+}
+
+.empty-item{
+  padding: 36px 30px;
+  &__header{
+    width: 100%;
+    height: 90px;
+    background: #F2F2F2;
+    border-radius: 10px;
+  }
+}
+
+.main-empty-item{
+  margin-top: 16px;
+
+  & div{
+    height: 15px;
+    background: #F2F2F2;
+    margin-bottom: 5px;
+    border-radius: 3px;
+  }
+  &__title{
+    width: 100%;
+  }
+  &__text{
+    width: 80%;
+  }
+}
+
+.footer-empty-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 16px;
+  & div{
+    border-radius: 8px;
+    background: #f6f6f6;
+  }
+
+  &__text{
+    width: 80px;
+    height: 24px;
+  }
+  &__button{
+    width: 32px;
+    height: 32px;
   }
 }
