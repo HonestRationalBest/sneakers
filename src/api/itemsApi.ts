@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Item } from "../store/ducks/state";
+import { Item } from "../store/ducks/items/state";
 
 interface Responce<T> {
   status: string;
@@ -10,6 +10,12 @@ export const ItemsApi = {
   fetchItems(): Promise<Responce<Item[]>> {
     return axios
       .get("http://localhost:3001/items")
+      .then((res) => res.data)
+      .catch((e) => console.log(e));
+  },
+  fetchFavorites(): Promise<Responce<Item[]>> {
+    return axios
+      .get("http://localhost:3001/favorites")
       .then((res) => res.data)
       .catch((e) => console.log(e));
   },

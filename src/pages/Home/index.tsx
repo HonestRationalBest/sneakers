@@ -3,9 +3,9 @@ import "./style/Home.scss";
 import { Slider } from "../../components/Slider/Slider";
 import { GridItem } from "../../components/GridItem/GridItem";
 
-import { fetchItems } from "../../store/ducks/actionCreaters";
+import { fetchItems } from "../../store/ducks/items/actionCreaters";
 import { useDispatch, useSelector } from "react-redux";
-import { selectIsItemsLoading, selectItems } from "../../store/ducks/selectors";
+import { selectIsItemsLoading, selectItems } from "../../store/ducks/items/selectors";
 import { EmptyGridItem } from "../../components/EmptyGridItem/EmptyGridItem";
 
 const Home: React.FC = () => {

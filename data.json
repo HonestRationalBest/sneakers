@@ -1,76 +1,77 @@
 {
-    "items":[
-        {
-          "_id": "61924be935d6c8a45d784fca",
-          "picture": "https://res.cloudinary.com/ds8hydjea/image/upload/v1636977535/sneakers/grid_item_01_o9dwch.jpg",
-          "title": "Voluptate ea eu officia irure.",
-          "price": 100
-        },
-        {
-          "_id": "61924be98e15ef52bb042c81",
-          "picture": "https://res.cloudinary.com/ds8hydjea/image/upload/v1636977535/sneakers/grid_item_01_o9dwch.jpg",
-          "title": "Duis dolore in consequat laborum non enim amet do pariatur nisi duis fugiat dolor voluptate.",
-          "price": 700
-        },
-        {
-          "_id": "61924be974cf769adf3dfc80",
-          "picture": "https://res.cloudinary.com/ds8hydjea/image/upload/v1636977535/sneakers/grid_item_01_o9dwch.jpg",
-          "title": "Veniam voluptate exercitation tempor in exercitation magna consequat incididunt deserunt tempor.",
-          "price": 300
-        },
-        {
-          "_id": "61924be9370cd97affd3311b",
-          "picture": "https://res.cloudinary.com/ds8hydjea/image/upload/v1636977535/sneakers/grid_item_01_o9dwch.jpg",
-          "title": "In incididunt non deserunt sint proident consequat proident exercitation veniam occaecat laboris elit sunt amet.",
-          "price": 500
-        },
-        {
-          "_id": "61924be9f34462e965a168a4",
-          "picture": "https://res.cloudinary.com/ds8hydjea/image/upload/v1636977535/sneakers/grid_item_01_o9dwch.jpg",
-          "title": "Mollit do labore ad laborum deserunt do non voluptate ex.",
-          "price": 500
-        },
-        {
-          "_id": "61924be9c6f4d2a0f40aa308",
-          "picture": "https://res.cloudinary.com/ds8hydjea/image/upload/v1636977535/sneakers/grid_item_01_o9dwch.jpg",
-          "title": "Et do aliqua ad veniam est eu voluptate nostrud qui tempor nulla.",
-          "price": 400
-        },
-        {
-          "_id": "61924be976df325d10493a9a",
-          "picture": "https://res.cloudinary.com/ds8hydjea/image/upload/v1636977535/sneakers/grid_item_01_o9dwch.jpg",
-          "title": "Proident in fugiat laborum esse excepteur eiusmod aute anim sit.",
-          "price": 500
-        },
-        {
-          "_id": "61924be956e572e079271a74",
-          "picture": "https://res.cloudinary.com/ds8hydjea/image/upload/v1636977535/sneakers/grid_item_01_o9dwch.jpg",
-          "title": "Laboris duis minim ullamco mollit nisi quis reprehenderit sint quis eiusmod veniam cillum cillum.",
-          "price": 600
-        },
-        {
-          "_id": "61924be9e56fcbc27df2c340",
-          "picture": "https://res.cloudinary.com/ds8hydjea/image/upload/v1636977535/sneakers/grid_item_01_o9dwch.jpg",
-          "title": "Ullamco ea nostrud nostrud nulla et cupidatat magna aliquip consectetur sit.",
-          "price": 700
-        },
-        {
-          "_id": "61924be9dd858a7fb9282fee",
-          "picture": "https://res.cloudinary.com/ds8hydjea/image/upload/v1636977535/sneakers/grid_item_01_o9dwch.jpg",
-          "title": "Labore velit sit irure eu anim esse incididunt sit laborum eiusmod adipisicing.",
-          "price": 400
-        },
-        {
-          "_id": "61924be94b0e2558675a5a88",
-          "picture": "https://res.cloudinary.com/ds8hydjea/image/upload/v1636977535/sneakers/grid_item_01_o9dwch.jpg",
-          "title": "Commodo Lorem est elit elit.",
-          "price": 500
-        },
-        {
-          "_id": "61924be921cc003fdd976e15",
-          "picture": "https://res.cloudinary.com/ds8hydjea/image/upload/v1636977535/sneakers/grid_item_01_o9dwch.jpg",
-          "title": "Laboris reprehenderit ullamco voluptate ex laboris dolore excepteur ad enim laboris.",
-          "price": 200
-        }
-      ]
+  "items": [
+    {
+      "_id": "61924be935d6c8a45d784fca",
+      "picture": "https://res.cloudinary.com/ds8hydjea/image/upload/v1636977535/sneakers/grid_item_01_o9dwch.jpg",
+      "title": "Voluptate ea eu officia irure.",
+      "price": 100
+    },
+    {
+      "_id": "61924be98e15ef52bb042c81",
+      "picture": "https://res.cloudinary.com/ds8hydjea/image/upload/v1636977535/sneakers/grid_item_01_o9dwch.jpg",
+      "title": "Duis dolore in consequat laborum non enim amet do pariatur nisi duis fugiat dolor voluptate.",
+      "price": 700
+    },
+    {
+      "_id": "61924be974cf769adf3dfc80",
+      "picture": "https://res.cloudinary.com/ds8hydjea/image/upload/v1636977535/sneakers/grid_item_01_o9dwch.jpg",
+      "title": "Veniam voluptate exercitation tempor in exercitation magna consequat incididunt deserunt tempor.",
+      "price": 300
+    },
+    {
+      "_id": "61924be9370cd97affd3311b",
+      "picture": "https://res.cloudinary.com/ds8hydjea/image/upload/v1636977535/sneakers/grid_item_01_o9dwch.jpg",
+      "title": "In incididunt non deserunt sint proident consequat proident exercitation veniam occaecat laboris elit sunt amet.",
+      "price": 500
+    },
+    {
+      "_id": "61924be9f34462e965a168a4",
+      "picture": "https://res.cloudinary.com/ds8hydjea/image/upload/v1636977535/sneakers/grid_item_01_o9dwch.jpg",
+      "title": "Mollit do labore ad laborum deserunt do non voluptate ex.",
+      "price": 500
+    },
+    {
+      "_id": "61924be9c6f4d2a0f40aa308",
+      "picture": "https://res.cloudinary.com/ds8hydjea/image/upload/v1636977535/sneakers/grid_item_01_o9dwch.jpg",
+      "title": "Et do aliqua ad veniam est eu voluptate nostrud qui tempor nulla.",
+      "price": 400
+    },
+    {
+      "_id": "61924be976df325d10493a9a",
+      "picture": "https://res.cloudinary.com/ds8hydjea/image/upload/v1636977535/sneakers/grid_item_01_o9dwch.jpg",
+      "title": "Proident in fugiat laborum esse excepteur eiusmod aute anim sit.",
+      "price": 500
+    },
+    {
+      "_id": "61924be956e572e079271a74",
+      "picture": "https://res.cloudinary.com/ds8hydjea/image/upload/v1636977535/sneakers/grid_item_01_o9dwch.jpg",
+      "title": "Laboris duis minim ullamco mollit nisi quis reprehenderit sint quis eiusmod veniam cillum cillum.",
+      "price": 600
+    },
+    {
+      "_id": "61924be9e56fcbc27df2c340",
+      "picture": "https://res.cloudinary.com/ds8hydjea/image/upload/v1636977535/sneakers/grid_item_01_o9dwch.jpg",
+      "title": "Ullamco ea nostrud nostrud nulla et cupidatat magna aliquip consectetur sit.",
+      "price": 700
+    },
+    {
+      "_id": "61924be9dd858a7fb9282fee",
+      "picture": "https://res.cloudinary.com/ds8hydjea/image/upload/v1636977535/sneakers/grid_item_01_o9dwch.jpg",
+      "title": "Labore velit sit irure eu anim esse incididunt sit laborum eiusmod adipisicing.",
+      "price": 400
+    },
+    {
+      "_id": "61924be94b0e2558675a5a88",
+      "picture": "https://res.cloudinary.com/ds8hydjea/image/upload/v1636977535/sneakers/grid_item_01_o9dwch.jpg",
+      "title": "Commodo Lorem est elit elit.",
+      "price": 500
+    },
+    {
+      "_id": "61924be921cc003fdd976e15",
+      "picture": "https://res.cloudinary.com/ds8hydjea/image/upload/v1636977535/sneakers/grid_item_01_o9dwch.jpg",
+      "title": "Laboris reprehenderit ullamco voluptate ex laboris dolore excepteur ad enim laboris.",
+      "price": 200
+    }
+  ],
+  "favorites": []
 }

@@ -14,5 +14,6 @@ export interface Item {
 
 export interface ItemsState {
   items: Item[];
+  favorites: Item[];
   loadingState: LoadingState;
 }
