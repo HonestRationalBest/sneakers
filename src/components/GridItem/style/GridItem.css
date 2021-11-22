@@ -2,12 +2,22 @@
   border: 1px solid #f3f3f3;
   border-radius: 40px;
   padding: 20px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .item__main {
   font-size: 14px;
   line-height: 121.42857%;
   margin: 18px 0px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .header__item {
@@ -78,5 +88,63 @@
   color: #e7e7e7;
   padding: 10px;
   border-radius: 7px;
+}
+
+.empty-item {
+  padding: 36px 30px;
+}
+
+.empty-item__header {
+  width: 100%;
+  height: 90px;
+  background: #F2F2F2;
+  border-radius: 10px;
+}
+
+.main-empty-item {
+  margin-top: 16px;
+}
+
+.main-empty-item div {
+  height: 15px;
+  background: #F2F2F2;
+  margin-bottom: 5px;
+  border-radius: 3px;
+}
+
+.main-empty-item__title {
+  width: 100%;
+}
+
+.main-empty-item__text {
+  width: 80%;
+}
+
+.footer-empty-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-top: 16px;
+}
+
+.footer-empty-item div {
+  border-radius: 8px;
+  background: #f6f6f6;
+}
+
+.footer-empty-item__text {
+  width: 80px;
+  height: 24px;
+}
+
+.footer-empty-item__button {
+  width: 32px;
+  height: 32px;
 }
 /*# sourceMappingURL=GridItem.css.map */
