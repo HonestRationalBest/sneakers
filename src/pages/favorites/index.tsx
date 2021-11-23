@@ -1,22 +1,15 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./style/Favorites.scss";
 import smile from "../../images/favorites_smile.png";
 import { NavLink } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { selectFavorites } from "../../store/ducks/items/selectors";
+import { useSelector } from "react-redux";
 import { GridItem } from "../../components/GridItem/GridItem";
-import { fetchFavorites } from "../../store/ducks/items/actionCreaters";
+import { selectFavorites } from "../../store/ducks/favorites/selectors";
 
 
 const Favorites: React.FC = () => {
 
   const favorites = useSelector(selectFavorites);
-
-  const dispatch = useDispatch()
-
-  useEffect(()=>{
-    dispatch(fetchFavorites())
-  }, [dispatch])
 
   return (
     <>

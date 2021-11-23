@@ -4,6 +4,7 @@ import createSagaMiddleware from 'redux-saga'
 import rootSaga from './sagas'
 import { ItemsState } from './ducks/items/state'
 import { CartState } from './ducks/cart/state'
+import { FavoritesState } from './ducks/favorites/state'
 
 const sagaMiddleware = createSagaMiddleware()
 
@@ -15,6 +16,7 @@ declare global {
 export interface RootState {
   items: ItemsState
   cart: CartState
+  favorites: FavoritesState
 }
 
 const composeEnhancers =

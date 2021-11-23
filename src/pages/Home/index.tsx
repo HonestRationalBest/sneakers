@@ -3,17 +3,16 @@ import "./style/Home.scss";
 import { Slider } from "../../components/Slider/Slider";
 import { GridItem } from "../../components/GridItem/GridItem";
 
-import { fetchFavorites, fetchItems } from "../../store/ducks/items/actionCreaters";
+import { fetchItems } from "../../store/ducks/items/actionCreaters";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  selectFavorites,
   selectIsItemsLoading,
   selectItems,
 } from "../../store/ducks/items/selectors";
 import { EmptyGridItem } from "../../components/EmptyGridItem/EmptyGridItem";
 import { selectCart } from "../../store/ducks/cart/selectors";
 import { Item } from "../../store/ducks/items/state";
-import { fetchCart } from "../../store/ducks/cart/actionCreaters";
+import { selectFavorites } from "../../store/ducks/favorites/selectors";
 
 const Home: React.FC = () => {
   const dispatch = useDispatch();
@@ -24,8 +23,7 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     dispatch(fetchItems());
-    dispatch(fetchFavorites());
-    dispatch(fetchCart());
+   
   }, [dispatch]);
 
   const generateItem = (item: Item) => {

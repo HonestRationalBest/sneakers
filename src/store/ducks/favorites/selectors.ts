@@ -1,7 +1,7 @@
 import { RootState } from '../../store'
-import { ItemsState, LoadingState } from './state'
+import { FavoritesState, LoadingState } from './state'
 
-export const selectItems = (state: RootState): ItemsState['items'] => state.items.items
+export const selectFavorites = (state: RootState): FavoritesState['favorites'] => state.favorites.favorites
 
 export const selectLoadingState = (state: RootState): LoadingState =>
 state.items.loadingState

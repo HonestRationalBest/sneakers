@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { addCart, removeCart } from "../../store/ducks/cart/actionCreaters";
-import { addFavorites, removeFavorites } from "../../store/ducks/items/actionCreaters";
+import { addFavorites, removeFavorites } from "../../store/ducks/favorites/actionCreaters";
 import { Item } from "../../store/ducks/items/state";
 import "./style/GridItem.scss";
 
