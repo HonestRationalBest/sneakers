@@ -71,6 +71,14 @@
     padding: 10px;
     border-radius: 7px;
   }
+
+  &__isInCart {
+    background: linear-gradient(180deg, #89F09C 0%, #3CC755 100%);
+    border: 0 !important;
+    &::before {
+      color: #ffffff;
+    }
+  }
 }
 
 .empty-item {

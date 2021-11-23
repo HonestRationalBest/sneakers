@@ -99,6 +99,16 @@
   border-radius: 7px;
 }
 
+.footer-item__isInCart {
+  background: -webkit-gradient(linear, left top, left bottom, from(#89F09C), to(#3CC755));
+  background: linear-gradient(180deg, #89F09C 0%, #3CC755 100%);
+  border: 0 !important;
+}
+
+.footer-item__isInCart::before {
+  color: #ffffff;
+}
+
 .empty-item {
   padding: 36px 30px;
 }

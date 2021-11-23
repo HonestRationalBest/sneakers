@@ -10,17 +10,111 @@
 
 .cart__body {
   position: fixed;
-  width: 24%;
-  height: 100vh;
+  width: 27.2%;
   background: white;
   right: 0;
   top: 0;
 }
 
+.cart__container {
+  max-width: 80%;
+  margin: 0 auto;
+  height: 100vh;
+}
+
 .cart__title {
   font-weight: 700;
   font-size: 24px;
-  margin: 32px 0px 0px 32px;
+  margin: 32px 0px 0px 0px;
+}
+
+.cart__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 88vh;
+}
+
+.cart__grid {
+  margin-top: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.summary-cart__button {
+  width: 100%;
+  padding: 17px;
+  margin-top: 25px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+  background: #9dd558;
+  border-radius: 18px;
+  position: relative;
+}
+
+.summary-cart__button::before {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  margin-left: 20px;
+  position: absolute;
+  right: 50px;
+  margin-top: 2px;
+}
+
+.text-summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+.text-summary__text {
+  display: inline;
+  white-space: nowrap;
+}
+
+.text-summary__dots {
+  width: 100%;
+  display: inline;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-height: 15px;
+  margin: 0px 0px 0px 2px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  color: #dfdfdf;
+}
+
+.text-summary__price {
+  font-weight: 700;
+  white-space: nowrap;
+  display: inline;
 }
 
 .offer-cart {

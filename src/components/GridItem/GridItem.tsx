@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
+import { addCart, removeCart } from "../../store/ducks/cart/actionCreaters";
 import { addFavorites, removeFavorites } from "../../store/ducks/items/actionCreaters";
 import { Item } from "../../store/ducks/items/state";
 import "./style/GridItem.scss";
 
 interface GridItemProps{
   isFavoriteDefault?: boolean
+  isInCartDefault?: boolean
   item: Item
 }
 
-export const GridItem: React.FC<GridItemProps> = ({item, isFavoriteDefault} : GridItemProps) => {
+export const GridItem: React.FC<GridItemProps> = ({item, isFavoriteDefault, isInCartDefault} : GridItemProps) => {
   const [isFavorite, setIsFavorite] = useState<boolean>(false);
+  const [isInCart, setIsInCart] = useState<boolean>(false);
   const dispatch = useDispatch();
 
   const handleChangeFavorites = () => {
@@ -24,9 +27,21 @@ export const GridItem: React.FC<GridItemProps> = ({item, isFavoriteDefault} : Gr
     }
   };
 
+  const handleChangeCart = () =>{
+
+    if(isInCart){
+      setIsInCart(false);
+      dispatch(removeCart(item._id));
+    }else{
+      setIsInCart(true);
+      dispatch(addCart({ ...item, isInCart }));
+    }
+  }
+
   useEffect(()=>{
     setIsFavorite(isFavoriteDefault as boolean)
-  }, [isFavoriteDefault])
+    setIsInCart(isInCartDefault as boolean)
+  }, [isFavoriteDefault, isInCartDefault])
 
   return (
     <div className="item">
@@ -52,10 +67,20 @@ export const GridItem: React.FC<GridItemProps> = ({item, isFavoriteDefault} : Gr
           <div className="footer-item__title">Price:</div>
           <div className="footer-item__text">{item.price} $</div>
         </div>
+        {isInCart ? 
+        <button
+        type="button"
+        className="footer-item__isInCart footer-item__button _icon-done-icon"
+        onClick={() => handleChangeCart()}
+      ></button>
+        :
         <button
           type="button"
           className="footer-item__button _icon-plus-icon"
+          onClick={() => handleChangeCart()}
         ></button>
+      }
+        
       </footer>
     </div>
   );

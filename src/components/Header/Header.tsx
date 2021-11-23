@@ -1,12 +1,18 @@
-import React, { createRef, useEffect, useState } from "react";
+import React, { createRef, useCallback, useEffect, useState } from "react";
 import "./style/Header.scss";
 import logo from "../../images/logo.png";
 import { NavLink } from "react-router-dom";
 import { Cart } from "../Cart/Cart";
+import { useDispatch, useSelector } from "react-redux";
+import { selectCart } from "../../store/ducks/cart/selectors";
+import { fetchCart } from "../../store/ducks/cart/actionCreaters";
 
 export const Header: React.FC = () => {
   const [showCart, setShowCart] = useState(false);
+  const [sum, setSum] = useState<number>(0);
   const cartBodyRef = createRef<HTMLDivElement>();
+  const cart = useSelector(selectCart)
+  const dispatch = useDispatch()
 
   const handleOpenCart = () => {
     setShowCart(true);
@@ -24,6 +30,23 @@ export const Header: React.FC = () => {
       handleClickOutside(e)
     );
   }, [cartBodyRef]);
+
+  
+  const countSum = useCallback(() => {
+    let sum = 0;
+    for (let item of cart) {
+      sum += item.price;
+    }
+    setSum(sum);
+  }, [cart]);
+
+  useEffect(() => {
+    countSum();
+  }, [countSum]);
+
+  useEffect(()=>{
+    dispatch(fetchCart())
+  }, [dispatch])
 
   return (
     <>
@@ -44,7 +67,7 @@ export const Header: React.FC = () => {
                 onClick={() => handleOpenCart()}
                 className="cart-header__icon _icon-cart-icon header-icon"
               ></div>
-              <div className="cart-header__text">123 $</div>
+              <div className="cart-header__text">{sum} $</div>
             </div>
             <NavLink to="/favorites">
               <div className="actions-header__favorite _icon-favorite-icon header-icon"></div>

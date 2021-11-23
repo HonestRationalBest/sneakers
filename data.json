@@ -73,5 +73,6 @@
       "price": 200
     }
   ],
-  "favorites": []
+  "favorites": [],
+  "cart": []
 }

@@ -3,40 +3,47 @@ import "./style/Home.scss";
 import { Slider } from "../../components/Slider/Slider";
 import { GridItem } from "../../components/GridItem/GridItem";
 
-import { fetchItems } from "../../store/ducks/items/actionCreaters";
+import { fetchFavorites, fetchItems } from "../../store/ducks/items/actionCreaters";
 import { useDispatch, useSelector } from "react-redux";
-import { selectFavorites, selectIsItemsLoading, selectItems } from "../../store/ducks/items/selectors";
+import {
+  selectFavorites,
+  selectIsItemsLoading,
+  selectItems,
+} from "../../store/ducks/items/selectors";
 import { EmptyGridItem } from "../../components/EmptyGridItem/EmptyGridItem";
+import { selectCart } from "../../store/ducks/cart/selectors";
+import { Item } from "../../store/ducks/items/state";
+import { fetchCart } from "../../store/ducks/cart/actionCreaters";
 
 const Home: React.FC = () => {
   const dispatch = useDispatch();
   const items = useSelector(selectItems);
   const favorites = useSelector(selectFavorites);
-
+  const cart = useSelector(selectCart);
   const isLoading = useSelector(selectIsItemsLoading);
 
   useEffect(() => {
     dispatch(fetchItems());
+    dispatch(fetchFavorites());
+    dispatch(fetchCart());
   }, [dispatch]);
 
-  // const compareIsFavoritesArray = () =>{
-  //   for(favorite of favorites){
-  //     if(favorite === )
-  //   }
-  // }
+  const generateItem = (item: Item) => {
+    const isFavorites = favorites.find((elem) => elem._id === item._id);
+    const isInCart = cart.find((elem) => elem._id === item._id);
 
-  // useEffect(()=>{
-  //   compareIsFavoritesArray();
-  // },[])
+    return (
+      <GridItem
+        item={item}
+        isFavoriteDefault={!!isFavorites}
+        isInCartDefault={!!isInCart}
+      />
+    );
+  };
 
-  const GridItems =  items.map((item) => {
-    for(let i =0; i<favorites.length; i++){
-      if(item._id === favorites[i]._id){
-        return <GridItem item={item} isFavoriteDefault={true} key={item._id}/>;
-      } 
-    }
-    return <GridItem item={item} key={item._id}/>;
-  })
+  const GridItems = items.map((item) => {
+    return generateItem(item);
+  });
 
   return (
     <div className="home">
@@ -78,7 +85,7 @@ const Home: React.FC = () => {
                 <EmptyGridItem />
               </>
             ) : (
-             GridItems
+              GridItems
             )}
           </div>
         </div>
