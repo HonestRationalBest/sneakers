@@ -30,6 +30,9 @@ export const itemsReducer = produce(
       case ItemsActionsType.ADD_FAVORITES:
         draft.favorites.push(action.payload);
         break;
+      case ItemsActionsType.REMOVE_FAVORITES:
+        draft.favorites = draft.favorites.filter((item) => item._id !== action.payload);
+        break;
       case ItemsActionsType.SET_LOADING_STATE:
         draft.loadingState = action.payload;
         break;

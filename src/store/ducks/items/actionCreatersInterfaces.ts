@@ -1,5 +1,5 @@
 import { Action } from "redux";
-import { Item, ItemsState, LoadingState } from "./state";
+import { Favorite, ItemsState, LoadingState } from "./state";
 
 export enum ItemsActionsType {
   FETCH_ITEMS = "items/FETCH_ITEMS",
@@ -8,6 +8,7 @@ export enum ItemsActionsType {
   FETCH_FAVORITES = "favorites/FETCH_FAVORITES",
   SET_FAVORITES = "favorites/SET_FAVORITES",
   ADD_FAVORITES = "favorites/ADD_FAVORITES",
+  REMOVE_FAVORITES = "favorites/REMOVE_FAVORITES",
 }
 
 export interface FetchItemsActionInterface extends Action<ItemsActionsType> {
@@ -26,7 +27,7 @@ export interface FetchFavoritesActionInterface
 
 export interface SetFavoritesActionInterface extends Action<ItemsActionsType> {
   type: ItemsActionsType.SET_FAVORITES;
-  payload: ItemsState["items"];
+  payload: ItemsState["favorites"];
 }
 
 export interface SetItemsLoadingStateActionInterface
@@ -39,7 +40,13 @@ export interface SetItemsLoadingStateActionInterface
 export interface AddFavoritesActionInterface
   extends Action<ItemsActionsType> {
   type: ItemsActionsType.ADD_FAVORITES;
-  payload: Item;
+  payload: Favorite;
+}
+
+export interface RemoveFavoritesActionInterface
+  extends Action<ItemsActionsType> {
+  type: ItemsActionsType.REMOVE_FAVORITES;
+  payload: string;
 }
 
 
@@ -50,4 +57,5 @@ export type ItemsActions =
   | SetFavoritesActionInterface
   | AddFavoritesActionInterface
   | SetItemsLoadingStateActionInterface
+  | RemoveFavoritesActionInterface
 

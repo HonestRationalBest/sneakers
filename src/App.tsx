@@ -8,8 +8,6 @@ import Orders from "./pages/Orders";
 import { Header } from "./components/Header/Header";
 import Favorites from "./pages/favorites";
 
-//TODO
-//Favorites
 
 const App = () => {
   return (

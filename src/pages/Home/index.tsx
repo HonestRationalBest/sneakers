@@ -5,18 +5,38 @@ import { GridItem } from "../../components/GridItem/GridItem";
 
 import { fetchItems } from "../../store/ducks/items/actionCreaters";
 import { useDispatch, useSelector } from "react-redux";
-import { selectIsItemsLoading, selectItems } from "../../store/ducks/items/selectors";
+import { selectFavorites, selectIsItemsLoading, selectItems } from "../../store/ducks/items/selectors";
 import { EmptyGridItem } from "../../components/EmptyGridItem/EmptyGridItem";
 
 const Home: React.FC = () => {
   const dispatch = useDispatch();
   const items = useSelector(selectItems);
+  const favorites = useSelector(selectFavorites);
 
   const isLoading = useSelector(selectIsItemsLoading);
 
   useEffect(() => {
     dispatch(fetchItems());
   }, [dispatch]);
+
+  // const compareIsFavoritesArray = () =>{
+  //   for(favorite of favorites){
+  //     if(favorite === )
+  //   }
+  // }
+
+  // useEffect(()=>{
+  //   compareIsFavoritesArray();
+  // },[])
+
+  const GridItems =  items.map((item) => {
+    for(let i =0; i<favorites.length; i++){
+      if(item._id === favorites[i]._id){
+        return <GridItem item={item} isFavoriteDefault={true} key={item._id}/>;
+      } 
+    }
+    return <GridItem item={item} key={item._id}/>;
+  })
 
   return (
     <div className="home">
@@ -58,9 +78,7 @@ const Home: React.FC = () => {
                 <EmptyGridItem />
               </>
             ) : (
-              items.map((item) => {
-                return <GridItem {...item} />;
-              })
+             GridItems
             )}
           </div>
         </div>

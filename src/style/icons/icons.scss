@@ -17,6 +17,10 @@
   }
 }
 
+
+._icon-favorite-full:before {
+  content: "\e900";
+}
 ._icon-arrow-icon:before {
   content: "\1f59b";
 }

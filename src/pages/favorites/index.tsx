@@ -6,9 +6,10 @@ import { useSelector } from "react-redux";
 import { selectFavorites } from "../../store/ducks/items/selectors";
 import { GridItem } from "../../components/GridItem/GridItem";
 
+
 const Favorites: React.FC = () => {
+
   const favorites = useSelector(selectFavorites);
-  console.log(favorites);
 
   return (
     <>
@@ -27,11 +28,10 @@ const Favorites: React.FC = () => {
           </div>
           <div className="main-favorites__grid">
             {favorites.map((item) => {
-              return <GridItem {...item} />;
+              return <GridItem item={item} isFavoriteDefault={true} key={item._id}/>;
             })}
           </div>
           </div>
-          
         </div>
       ) : (
         <div className="favorites">

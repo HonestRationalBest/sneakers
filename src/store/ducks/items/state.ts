@@ -12,8 +12,12 @@ export interface Item {
   price: number;
 }
 
+export interface Favorite extends Item{
+  isFavorite: boolean
+}
+
 export interface ItemsState {
   items: Item[];
-  favorites: Item[];
+  favorites: Favorite[];
   loadingState: LoadingState;
 }
