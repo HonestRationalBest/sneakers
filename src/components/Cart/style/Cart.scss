@@ -150,3 +150,50 @@
     }
   }
 }
+
+.order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
+
+  &__img {
+    width: 83px;
+    height: 120px;
+  }
+
+  &__text {
+    text-align: center;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 22px;
+    margin: 10px 0px 12px 0px;
+  }
+
+  &__main {
+    font-size: 16px;
+    opacity: 0.4;
+    line-height: 24 / 16 * 100%;
+
+  }
+
+  &__button {
+    margin-top: 40px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    background: #9dd458;
+    border-radius: 18px;
+    display: flex;
+    padding: 17px 0px;
+    width: 245px;
+    justify-content: center;
+    cursor: pointer;
+    &::before {
+      margin-right: 10px;
+    }
+  }
+}

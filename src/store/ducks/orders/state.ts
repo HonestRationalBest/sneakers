@@ -1,4 +1,4 @@
-import { Item } from "../items/state";
+import { Cart } from "../cart/state";
 
 export enum LoadingState {
   LOADED = "LOADED",
@@ -7,11 +7,11 @@ export enum LoadingState {
   NEVER = "NEVER",
 }
 
-export interface Cart extends Item{
-  isInCart?: boolean
-}
+// export interface Order {
+//   orders: Cart[]
+// }
 
-export interface CartState {
-  cart: Item[];
+export interface OrdersState {
+  orders: Cart[];
   loadingState: LoadingState;
 }

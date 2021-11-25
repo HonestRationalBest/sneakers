@@ -1,10 +1,13 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import cart__img__empty from "../../images/box.png";
+import success_order from "../../images/success_order.png";
+import { removeCart } from "../../store/ducks/cart/actionCreaters";
 import {
   selectCart,
   selectIsCartLoading,
 } from "../../store/ducks/cart/selectors";
+import { addOrders } from "../../store/ducks/orders/actionCreaters";
 import { CartItem } from "../CartItem/CartItem";
 import "./style/Cart.scss";
 
@@ -19,9 +22,19 @@ export const Cart: React.FC<CartProps> = ({
 }: CartProps) => {
   const [sum, setSum] = useState<number>(0);
   const [tax, setTax] = useState<number>(0);
+  const [isSuccessOrder, setIsSuccessOrder] = useState<boolean>(false);
   const isLoading = useSelector(selectIsCartLoading);
 
   const cart = useSelector(selectCart);
+  const dispatch = useDispatch();
+
+  const handleAddOrder = () => {
+    dispatch(addOrders(cart));
+    for (let item of cart) {
+      dispatch(removeCart(item._id));
+    }
+    setIsSuccessOrder(true);
+  };
 
   const handleShowCart = () => {
     setShowCart(false);
@@ -79,9 +92,30 @@ export const Cart: React.FC<CartProps> = ({
                   <button
                     type="button"
                     className="summary-cart__button _icon-arrow-left"
+                    onClick={() => handleAddOrder()}
                   >
                     Make an order
                   </button>
+                </div>
+              </div>
+            ) : isSuccessOrder ? (
+              <div className="order">
+                 <img
+                  className="order__img"
+                  src={success_order}
+                  alt="img"
+                />
+                <div className="order__text">
+                  <h3 className="order__title">Order has been created!</h3>
+                  <h3 className="order__main">
+                  You order #18 will be arrived soon
+                  </h3>
+                </div>
+                <div
+                  className="order__button _icon-arrow-left"
+                  onClick={() => handleShowCart()}
+                >
+                  Go back
                 </div>
               </div>
             ) : (

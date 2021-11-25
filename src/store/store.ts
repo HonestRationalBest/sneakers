@@ -5,6 +5,7 @@ import rootSaga from './sagas'
 import { ItemsState } from './ducks/items/state'
 import { CartState } from './ducks/cart/state'
 import { FavoritesState } from './ducks/favorites/state'
+import { OrdersState } from './ducks/orders/state'
 
 const sagaMiddleware = createSagaMiddleware()
 
@@ -17,6 +18,7 @@ export interface RootState {
   items: ItemsState
   cart: CartState
   favorites: FavoritesState
+  orders: OrdersState
 }
 
 const composeEnhancers =
