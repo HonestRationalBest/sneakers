@@ -9,8 +9,8 @@ interface Responce<T> {
 export const CartApi = {
   fetchCart(): Promise<Responce<Item[]>> {
     return axios
-      .get("http://localhost:3001/cart")
-      .then((res) => res.data)
+      .get("https://sneakersbackend.herokuapp.com/items")
+      .then((res) => res.data.cart)
       .catch((e) => console.log(e));
   },
 };

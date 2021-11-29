@@ -9,8 +9,8 @@ interface Responce<T> {
 export const OrdersApi = {
   fetchOrders(): Promise<Responce<Item[]>> {
     return axios
-      .get("http://localhost:3001/favorites")
-      .then((res) => res.data)
+      .get("https://sneakersbackend.herokuapp.com/items")
+      .then((res) => res.data.orders)
       .catch((e) => console.log(e));
   },
 };
